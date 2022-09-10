@@ -23,3 +23,14 @@ print(result_2)
 n = int(input('n = '))
 print(gen(n))
 '''
+
+
+a = 0
+b = 1
+c = 0
+v = 1
+
+for i in range(n):
+    a, b = b, a + b
+    result.append(a)
+
