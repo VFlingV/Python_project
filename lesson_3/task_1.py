@@ -4,7 +4,7 @@
 Пример:
 - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 '''
-ls = [2, 3, 5, 9, 3, 4, 6, 7]
-result = [i for i in ls if i % 2 != 0]
+ls = [2, 3, 5, 9, 3]
+result = [ls[i] for i in range(len(ls)) if i % 2 != 0]
 print(result)
 print(sum(result))
