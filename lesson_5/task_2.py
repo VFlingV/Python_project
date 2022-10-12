@@ -33,7 +33,7 @@ def cand_count_bot(player, cand_of):
             count = 28
         else:
             cand = cand_of
-        while cand > 28 or cand < 1 or cand > cand_of:
+        while cand > 28 or cand < 1 or cand > cand_of:  # уже не нужен
             if cand_of > 28:
                 cand = random.randint(1, count)
                 print(f'bot забрал {cand} конфет')
