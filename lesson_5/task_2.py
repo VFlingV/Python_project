@@ -10,7 +10,7 @@ b) Подумайте как наделить бота ""интеллектом"
 
 """
 import random
-cand_on = 20
+cand_on = 100
 
 
 def cand_count(player, cand_of):
@@ -28,9 +28,18 @@ def cand_count(player, cand_of):
 def cand_count_bot(player, cand_of):
     cand = 0
     if player == 'bot':
+        count = 28
+        if cand_of > 28:
+            count = 28
+        else:
+            cand = cand_of
         while cand > 28 or cand < 1 or cand > cand_of:
-            cand = random.randint(1, cand_of)
-            print(f'bot забрал {cand} конфет')
+            if cand_of > 28:
+                cand = random.randint(1, count)
+                print(f'bot забрал {cand} конфет')
+            else:
+                cand = cand_of
+                print(f'bot забрал {cand} конфет')
         return cand
     else:
         try:
